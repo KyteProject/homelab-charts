@@ -1,4 +1,5 @@
 ---
+test: true
 registry: https://kubernetes-sigs.github.io/external-dns
 chart: external-dns
 version: 1.15.2

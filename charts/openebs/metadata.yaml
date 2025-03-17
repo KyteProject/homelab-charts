@@ -1,4 +1,5 @@
 ---
+test: true
 registry: https://openebs.github.io/openebs
 chart: openebs
 version: 4.2.0

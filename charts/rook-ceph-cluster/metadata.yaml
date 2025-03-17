@@ -1,4 +1,5 @@
 ---
+test: true
 registry: https://charts.rook.io/release
 chart: rook-ceph-cluster
 version: v1.16.5

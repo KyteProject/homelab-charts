@@ -1,4 +1,5 @@
 ---
+test: true
 registry: https://repos.emqx.io/charts
 chart: emqx-operator
 version: 2.2.28

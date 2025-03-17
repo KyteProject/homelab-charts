@@ -1,4 +1,5 @@
 ---
+test: true
 registry: https://backube.github.io/helm-charts/
 chart: volsync
 version: 0.12.0
