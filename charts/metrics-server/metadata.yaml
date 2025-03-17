@@ -1,5 +1,5 @@
 ---
-test: true
+test: false
 registry: https://kubernetes-sigs.github.io/metrics-server
 chart: metrics-server
 version: 3.12.2
