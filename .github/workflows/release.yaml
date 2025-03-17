@@ -82,10 +82,15 @@ jobs:
       - name: Pull Chart
         run: helm pull upstream/${{ matrix.charts.chart }} --version ${{ matrix.charts.version }}
 
+      - name: Set lowercase repository name
+        id: lowercase
+        run: |
+          echo "repo=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+
       - if: ${{ github.event_name != 'pull_request' }}
         name: Push Chart
-        run: helm push *.tgz oci://ghcr.io/${{ github.repository }}
+        run: helm push *.tgz oci://ghcr.io/${{ steps.lowercase.outputs.repo }}
 
       - if: ${{ github.event_name != 'pull_request' }}
         name: Sign artifacts with Cosign
-        run: cosign sign --yes ghcr.io/${{ github.repository }}/${{ matrix.charts.chart }}:${{ matrix.charts.version }}
+        run: cosign sign --yes ghcr.io/${{ steps.lowercase.outputs.repo }}/${{ matrix.charts.chart }}:${{ matrix.charts.version }}
