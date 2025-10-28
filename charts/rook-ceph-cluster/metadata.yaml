@@ -2,4 +2,4 @@
 test: false
 registry: https://charts.rook.io/release
 chart: rook-ceph-cluster
-version: v1.18.5
+version: v1.18.6
