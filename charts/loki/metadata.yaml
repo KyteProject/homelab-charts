@@ -2,4 +2,4 @@
 test: false
 registry: https://grafana.github.io/helm-charts
 chart: loki
-version: 6.51.0
+version: 6.52.0
