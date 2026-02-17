@@ -2,4 +2,4 @@
 test: false
 registry: https://piraeus.io/helm-charts/
 chart: snapshot-controller
-version: 5.0.2
+version: 5.0.3
